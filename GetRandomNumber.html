@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>RandomNumbers</title>
+    <style type="text/css">
+        html {
+            background-color: powderblue;
+        }
+    </style>
+</head>
+<!--Write a JavaScript function where the program takes a random integer between 1 to 10.
+    Prompt the user is to input a number. If the user input is correct,
+     display a message "You are correct" if not display "Try again"-->
+<body>
+    <p>
+        The App chose a Random number between <1-10>
+            <br />
+            Guess what number it is and enter below !
+    </p>
+    <input id="RandomNumber" size="30" value=" ">
+    <button onclick="GenRandomNum()">Start</button>
+    <!---------<p id="demo"> </p>----->
+    <div id="samepage"></div>
+    <script>
+        function GenRandomNum() {
+            var RandomNumber, UserNumber;
+            UserNumber = document.getElementById("RandomNumber").value;
+            //check NAN,Negative Numbers, !<1-10>??
+            //if ( isNaN(UserNumber)) || (UserNumber < 1) || (UserNumber > 10)) {
+            // alert("You should enter a number between 1-10! Try again!");
+            // }
+            //else{}
+
+            UserNumber = parseInt(UserNumber);
+            //document.write("typeof UserNumber :  " + typeof UserNumber);
+            //console.log(UserNumber);
+            RandomNumber = Math.random() * 10;
+            RandomNumber = Math.ceil(RandomNumber);
+            if (RandomNumber == UserNumber) {
+                alert("Your number is correct!");
+            }
+            else {
+                var x = RandomNumber + "<br />" + "Your number was : " + UserNumber + "<br />" + "Try it again!";
+                document.getElementById("samepage").innerHTML = "App's number was : " + x;
+            }
+
+        }
+    </script>
+</body>
+</html>
