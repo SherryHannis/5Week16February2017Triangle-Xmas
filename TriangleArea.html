@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Triangle-Area</title>
+    <style type="text/css">
+        html {
+            background-color: lemonchiffon;
+        }
+    </style>
+</head>
+<body>
+    <p>Enter a, b, c and Click the button to display the Area of Triangle!</p>
+
+    <!---  <button onclick="CalculateArea()">Calculate the Area</button> ------>
+    <input type="button" onclick="CalculateArea()" value="Calculate the Area" />
+    <p id="samepage"></p>
+    <script>
+        function CalculateArea() {
+            var a = parseInt(window.prompt("Input a, an integer number <>0 like (10,12,...)", "5"));
+            var b = parseInt(window.prompt("Input b, an integer number <>0 like (11,12,...)", "6"));
+            var c = parseInt(window.prompt("Input c,an integer number <>0 like (11,12,...)", "7"));
+
+            var p = ((a + b + c) / 2);
+            console.log(p);
+            //   document.write("typeof ((a + b + c) / 2) :  " + typeof p);
+
+            var temp = (p * (p - a) * (p - b) * (p - c));
+            console.log(temp);
+
+            var Area = (Math.sqrt(temp));
+            document.getElementById("samepage").innerHTML = "<b> The triangle's area is : </b> " + Math.round(Area);
+            // Area = Math.round(Area);
+            // console.log(Area);
+            //document.write(" <br />" + "<b> The triangle's area is : </b> " + Area);
+        }
+    </script>
+</body>
+</html>
