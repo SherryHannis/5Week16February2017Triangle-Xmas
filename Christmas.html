@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Days To Christmas</title>
+    <style type="text/css">
+        html {
+            background-color: #c4ffdf;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var christmasD = new Date(today.getFullYear(), 11, 25);
+        if((today.getMonth == 11) && (today.getDate() > 25))
+        {
+            christmasD.setFullYear(christmasD.get)
+        }
+        var aDay = 1000 * 60 * 60 * 24;
+        var x = Math.round((christmasD.getTime() - today.getTime()) / aDay);
+        document.write("Today's date: <br /> " + "&nbsp &nbsp" + Date());
+        document.write("<br /> <br /><strong>Days till Christmas: </strong> " + x);
+    </script>
+</body>
+</html>
